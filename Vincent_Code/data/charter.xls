@@ -1,0 +1,1177 @@
+
+
+<html
+    xmlns:x="urn:schemas-microsoft-com:office:excel"
+    xmlns:ss="urn:schemas-microsoft-com:office:spreadsheet">
+    <head>
+    <title>Title</title>
+    <style>
+    <!--table
+    .excelText
+        {mso-style-parent:style0;
+        mso-number-format:"\@";}
+    -->
+    </style>
+    </head>
+    <body>
+            <span id="lblSearchResults"><table>
+<tr>
+<td>Org Name</td>
+<td>Org Code</td>
+<td>Org Type</td>
+<td>Function</td>
+<td>Contact Name</td>
+<td>Address 1</td>
+<td>Address 2</td>
+<td>Town</td>
+<td>State</td>
+<td>Zip</td>
+<td>Phone</td><td>Fax</td><td>Grade</td>
+</tr>
+<tr>
+<td>Abby Kelley Foster Charter Public (District): Abby Kelley Foster Charter Public School</td>
+<td class='excelText'>04450105</td>
+<td>Charter School</td>
+<td>Principal</td>
+<td>Heidi Paluk</td>
+<td>10 New Bond Street</td>
+<td></td>
+<td>Worcester</td>
+<td>MA</td>
+<td class='excelText'>01606</td>
+<td>508-854-8400</td>
+<td>508-854-8484</td>
+<td>K,01,02,03,04,05,06,07,08,09,10,11,12</td>
+    </tr>
+<tr>
+<td>Academy Of the Pacific Rim Charter Public (District): Academy Of the Pacific Rim Charter Public School</td>
+<td class='excelText'>04120530</td>
+<td>Charter School</td>
+<td>Principal</td>
+<td>Farida Graham</td>
+<td>1 Westinghouse Plaza</td>
+<td>Building B</td>
+<td>Hyde Park</td>
+<td>MA</td>
+<td class='excelText'>02136</td>
+<td>617-361-0050</td>
+<td>617-361-0045</td>
+<td>05,06,07,08,09,10,11,12</td>
+    </tr>
+<tr>
+<td>Advanced Math and Science Academy Charter (District): Advanced Math and Science Academy Charter School</td>
+<td class='excelText'>04300305</td>
+<td>Charter School</td>
+<td>Principal</td>
+<td>Michael Nawrocki</td>
+<td>201 Forest Street</td>
+<td></td>
+<td>Marlborough</td>
+<td>MA</td>
+<td class='excelText'>01752</td>
+<td>508-597-2400</td>
+<td>508-597-2499</td>
+<td>06,07,08,09,10,11,12</td>
+    </tr>
+<tr>
+<td>Alma del Mar Charter School (District): Alma del Mar Charter School</td>
+<td class='excelText'>04090205</td>
+<td>Charter School</td>
+<td>Principal</td>
+<td>Taylor DeLoach</td>
+<td>515 Belleville Ave</td>
+<td></td>
+<td>New Bedford</td>
+<td>MA</td>
+<td class='excelText'>02746</td>
+<td>774-206-6827</td>
+<td>774-206-6833</td>
+<td>K,01,02,03,04,05,06,07,08</td>
+    </tr>
+<tr>
+<td>Argosy Collegiate Charter School (District): Argosy Collegiate Charter School</td>
+<td class='excelText'>35090305</td>
+<td>Charter School</td>
+<td>Principal</td>
+<td>Monica Filgo</td>
+<td>263 Hamlet Street</td>
+<td></td>
+<td>Fall River</td>
+<td>MA</td>
+<td class='excelText'>02724</td>
+<td>508-567-4725</td>
+<td>774-365-4383</td>
+<td>06,07,08,09,10,11,12</td>
+    </tr>
+<tr>
+<td>Atlantis Charter (District): Atlantis Charter School</td>
+<td class='excelText'>04910550</td>
+<td>Charter School</td>
+<td>Principal</td>
+<td>Robert Beatty</td>
+<td>991 Jefferson St</td>
+<td></td>
+<td>Fall River</td>
+<td>MA</td>
+<td class='excelText'>02721</td>
+<td>508-646-6410</td>
+<td>508-672-3489</td>
+<td>K,01,02,03,04,05,06,07,08,09,10,11,12</td>
+    </tr>
+<tr>
+<td>Baystate Academy Charter Public School (District): Baystate Academy Charter Public School</td>
+<td class='excelText'>35020405</td>
+<td>Charter School</td>
+<td>Principal</td>
+<td>Bernard Ball</td>
+<td>2001 Roosevelt Avenue</td>
+<td></td>
+<td>Springfield</td>
+<td>MA</td>
+<td class='excelText'>01104</td>
+<td>413-366-5100</td>
+<td>413-366-5101</td>
+<td>06,07,08,09,10,11,12</td>
+    </tr>
+<tr>
+<td>Benjamin Banneker Charter Public (District): Benjamin Banneker Charter Public School</td>
+<td class='excelText'>04200205</td>
+<td>Charter School</td>
+<td>Principal</td>
+<td>Sherley Bretous</td>
+<td>21 Notre Dame Avenue</td>
+<td></td>
+<td>Cambridge</td>
+<td>MA</td>
+<td class='excelText'>02140</td>
+<td>617-497-7771</td>
+<td>617-497-4223</td>
+<td>PK,K,01,02,03,04,05,06</td>
+    </tr>
+<tr>
+<td>Benjamin Franklin Classical Charter Public (District): Benjamin Franklin Classical Charter Public School</td>
+<td class='excelText'>04470205</td>
+<td>Charter School</td>
+<td>Principal</td>
+<td>Heather Zolnowski</td>
+<td>500 Financial Park</td>
+<td></td>
+<td>Franklin</td>
+<td>MA</td>
+<td class='excelText'>02038</td>
+<td>508-541-3434</td>
+<td>508-541-5396</td>
+<td>K,01,02,03,04,05,06,07,08</td>
+    </tr>
+<tr>
+<td>Berkshire Arts and Technology Charter Public (District): Berkshire Arts and Technology Charter Public School</td>
+<td class='excelText'>04140305</td>
+<td>Charter School</td>
+<td>Principal</td>
+<td>Erin Hattaway</td>
+<td>One Commercial Place</td>
+<td>PO Box 267</td>
+<td>Adams</td>
+<td>MA</td>
+<td class='excelText'>01220</td>
+<td>413-743-7311</td>
+<td>413-743-7327</td>
+<td>06,07,08,09,10,11,12</td>
+    </tr>
+<tr>
+<td>Boston Collegiate Charter (District): Boston Collegiate Charter School</td>
+<td class='excelText'>04490305</td>
+<td>Charter School</td>
+<td>Principal</td>
+<td>Jenna Ogundipe</td>
+<td>11 Mayhew Street</td>
+<td></td>
+<td>Dorchester</td>
+<td>MA</td>
+<td class='excelText'>02125</td>
+<td>617-265-1172</td>
+<td>617-265-1176</td>
+<td>05,06,07,08,09,10,11,12</td>
+    </tr>
+<tr>
+<td>Boston Day and Evening Academy Charter (District): Boston Day and Evening Academy Charter School</td>
+<td class='excelText'>04240505</td>
+<td>Charter School</td>
+<td>Principal</td>
+<td>Alison Hramiec</td>
+<td>20 Kearsarge Ave</td>
+<td></td>
+<td>Roxbury</td>
+<td>MA</td>
+<td class='excelText'>02119</td>
+<td>617-635-6789</td>
+<td>617-635-6380</td>
+<td>09,10,11,12</td>
+    </tr>
+<tr>
+<td>Boston Green Academy Horace Mann Charter School (District): Boston Green Academy Horace Mann Charter School</td>
+<td class='excelText'>04110305</td>
+<td>Charter School</td>
+<td>Principal</td>
+<td>Matthew Holzer</td>
+<td>20 Warren St.</td>
+<td></td>
+<td>Brighton</td>
+<td>MA</td>
+<td class='excelText'>02135</td>
+<td>617-635-9860</td>
+<td>617-635-9858</td>
+<td>06,07,08,09,10,11,12</td>
+    </tr>
+<tr>
+<td>Boston Preparatory Charter Public (District): Boston Preparatory Charter Public School</td>
+<td class='excelText'>04160305</td>
+<td>Charter School</td>
+<td>Principal</td>
+<td>Meekerley Sanon</td>
+<td>885 River Street</td>
+<td></td>
+<td>Hyde Park</td>
+<td>MA</td>
+<td class='excelText'>02136</td>
+<td>617-333-6688</td>
+<td>617-333-6689</td>
+<td>06,07,08,09,10,11,12</td>
+    </tr>
+<tr>
+<td>Boston Renaissance Charter Public (District): Boston Renaissance Charter Public School</td>
+<td class='excelText'>04810550</td>
+<td>Charter School</td>
+<td>Principal</td>
+<td>Alexandra Banhares-Buckmire</td>
+<td>1415 Hyde Park Ave</td>
+<td></td>
+<td>Hyde Park</td>
+<td>MA</td>
+<td class='excelText'>02136</td>
+<td>617-357-0900</td>
+<td>617-357-0949</td>
+<td>PK,K,01,02,03,04,05,06</td>
+    </tr>
+<tr>
+<td>Bridge Boston Charter School (District): Bridge Boston Charter School</td>
+<td class='excelText'>04170205</td>
+<td>Charter School</td>
+<td>Principal</td>
+<td>Orin Gutlerner</td>
+<td>435 Warren St.</td>
+<td></td>
+<td>Roxbury</td>
+<td>MA</td>
+<td class='excelText'>02119</td>
+<td>857-229-1601</td>
+<td>617-674-0861</td>
+<td>PK,K,01,02,03,04,05,06,07,08</td>
+    </tr>
+<tr>
+<td>Brooke Charter School (District): Brooke Charter School</td>
+<td class='excelText'>04280305</td>
+<td>Charter School</td>
+<td>Principal</td>
+<td>Jon Clark</td>
+<td>190 Cummins Highway</td>
+<td></td>
+<td>Roslindale</td>
+<td>MA</td>
+<td class='excelText'>02131</td>
+<td>617-325-7977</td>
+<td>617-325-2260</td>
+<td>K,01,02,03,04,05,06,07,08,09,10,11,12</td>
+    </tr>
+<tr>
+<td>Cape Cod Lighthouse Charter (District): Cape Cod Lighthouse Charter School</td>
+<td class='excelText'>04320530</td>
+<td>Charter School</td>
+<td>Principal</td>
+<td>Catherine O'leary</td>
+<td>195 Route 137</td>
+<td></td>
+<td>East Harwich</td>
+<td>MA</td>
+<td class='excelText'>02645</td>
+<td>774-408-7994</td>
+<td>774-237-9041</td>
+<td>06,07,08</td>
+    </tr>
+<tr>
+<td>Christa McAuliffe Charter School (District): Christa McAuliffe Charter School</td>
+<td class='excelText'>04180305</td>
+<td>Charter School</td>
+<td>Principal</td>
+<td>Sarah Steinitz</td>
+<td>139 Newbury St</td>
+<td></td>
+<td>Framingham</td>
+<td>MA</td>
+<td class='excelText'>01701</td>
+<td>508-879-9000</td>
+<td>508-471-3135</td>
+<td>06,07,08</td>
+    </tr>
+<tr>
+<td>City on a Hill Charter Public School (District): City on a Hill Charter Public School</td>
+<td class='excelText'>04370505</td>
+<td>Charter School</td>
+<td>Principal</td>
+<td>Laura Tobias</td>
+<td>58 Circuit Street</td>
+<td></td>
+<td>Roxbury</td>
+<td>MA</td>
+<td class='excelText'>02119</td>
+<td>617-445-1515</td>
+<td>617-445-9153</td>
+<td>09,10,11,12</td>
+    </tr>
+<tr>
+<td>Codman Academy Charter Public (District): Codman Academy Charter Public School</td>
+<td class='excelText'>04380505</td>
+<td>Charter School</td>
+<td>Principal</td>
+<td>Pamela Casna</td>
+<td>637 Washington Street</td>
+<td></td>
+<td>Dorchester</td>
+<td>MA</td>
+<td class='excelText'>02124</td>
+<td>617-287-0700</td>
+<td>617-287-9064</td>
+<td>PK,K,01,02,03,04,05,06,07,08,09,10,11,12</td>
+    </tr>
+<tr>
+<td>Collegiate Charter School of Lowell (District): Collegiate Charter School of Lowell</td>
+<td class='excelText'>35030205</td>
+<td>Charter School</td>
+<td>Principal</td>
+<td>Adam Bakr</td>
+<td>1857 Middlesex Street</td>
+<td></td>
+<td>Lowell</td>
+<td>MA</td>
+<td class='excelText'>01851</td>
+<td>978-458-1399</td>
+<td>978-458-1366</td>
+<td>K,01,02,03,04,05,06,07,08,09,10,11,12</td>
+    </tr>
+<tr>
+<td>Community Charter School of Cambridge (District): Community Charter School of Cambridge</td>
+<td class='excelText'>04360305</td>
+<td>Charter School</td>
+<td>Principal</td>
+<td>Rebecca Norris</td>
+<td>245 Bent Street</td>
+<td></td>
+<td>Cambridge</td>
+<td>MA</td>
+<td class='excelText'>02141</td>
+<td>617-354-0047</td>
+<td>617-354-3624</td>
+<td>06,07,08,09,10,11,12</td>
+    </tr>
+<tr>
+<td>Community Day Charter Public School (District): Community Day Charter Public School</td>
+<td class='excelText'>04400205</td>
+<td>Charter School</td>
+<td>Principal</td>
+<td>Mary Chance</td>
+<td>73 Prospect Street</td>
+<td></td>
+<td>Lawrence</td>
+<td>MA</td>
+<td class='excelText'>01841</td>
+<td>978-681-9910</td>
+<td>978-682-1013</td>
+<td>PK,K,01,02,03,04,05,06,07,08</td>
+    </tr>
+<tr>
+<td>Conservatory Lab Charter (District): Conservatory Lab Charter School</td>
+<td class='excelText'>04390050</td>
+<td>Charter School</td>
+<td>Principal</td>
+<td>Nicole Mack</td>
+<td>395 Columbia Rd</td>
+<td></td>
+<td>Dorchester</td>
+<td>MA</td>
+<td class='excelText'>02125</td>
+<td>617-254-8904</td>
+<td>617-254-8908</td>
+<td>PK,K,01,02,03,04,05,06,07,08</td>
+    </tr>
+<tr>
+<td>Dudley Street Neighborhood Charter School (District): Dudley Street Neighborhood Charter School</td>
+<td class='excelText'>04070405</td>
+<td>Charter School</td>
+<td>Principal</td>
+<td>Elijah Heckstall</td>
+<td>6 Shirley Street</td>
+<td></td>
+<td>Boston</td>
+<td>MA</td>
+<td class='excelText'>02119</td>
+<td>617-227-8055</td>
+<td>--</td>
+<td>PK,K,01,02,03,04,05</td>
+    </tr>
+<tr>
+<td>Edward M. Kennedy Academy for Health Careers: A Horace Mann Charter Public School (District): Edward M. Kennedy Academy for Health Careers: A Horace Mann Charter Public School</td>
+<td class='excelText'>04520505</td>
+<td>Charter School</td>
+<td>Principal</td>
+<td>Caren Walker Gregory</td>
+<td>10 Fenwood Road</td>
+<td></td>
+<td>Boston</td>
+<td>MA</td>
+<td class='excelText'>02115</td>
+<td>617-635-8450</td>
+<td>617-635-8452</td>
+<td>09,10,11,12</td>
+    </tr>
+<tr>
+<td>Excel Academy Charter (District): Excel Academy Charter School</td>
+<td class='excelText'>04100205</td>
+<td>Charter School</td>
+<td>Principal</td>
+<td>Owen Stearns</td>
+<td>58 Moore Street</td>
+<td></td>
+<td>East Boston</td>
+<td>MA</td>
+<td class='excelText'>02128</td>
+<td>617-874-4080</td>
+<td>617-674-3436</td>
+<td>05,06,07,08,09,10,11,12</td>
+    </tr>
+<tr>
+<td>Four Rivers Charter Public (District): Four Rivers Charter Public School</td>
+<td class='excelText'>04130505</td>
+<td>Charter School</td>
+<td>Principal</td>
+<td>Jenni Manfredi</td>
+<td>248 Colrain Road</td>
+<td></td>
+<td>Greenfield</td>
+<td>MA</td>
+<td class='excelText'>01301</td>
+<td>413-775-4577</td>
+<td>413-775-4578</td>
+<td>07,08,09,10,11,12</td>
+    </tr>
+<tr>
+<td>Foxborough Regional Charter (District): Foxborough Regional Charter School</td>
+<td class='excelText'>04460550</td>
+<td>Charter School</td>
+<td>Principal</td>
+<td>Michael Cournoyer</td>
+<td>131 Central Street</td>
+<td></td>
+<td>Foxborough</td>
+<td>MA</td>
+<td class='excelText'>02035</td>
+<td>508-543-2508</td>
+<td>508-543-7982</td>
+<td>K,01,02,03,04,05,06,07,08,09,10,11,12</td>
+    </tr>
+<tr>
+<td>Francis W. Parker Charter Essential (District): Francis W. Parker Charter Essential School</td>
+<td class='excelText'>04780505</td>
+<td>Charter School</td>
+<td>Principal</td>
+<td>Brian Harrigan</td>
+<td>49 Antietam St</td>
+<td></td>
+<td>Devens</td>
+<td>MA</td>
+<td class='excelText'>01434</td>
+<td>978-772-3293</td>
+<td>978-772-3295</td>
+<td>07,08,09,10,11,12</td>
+    </tr>
+<tr>
+<td>Global Learning Charter Public (District): Global Learning Charter Public School</td>
+<td class='excelText'>04960305</td>
+<td>Charter School</td>
+<td>Principal</td>
+<td>Lena Pires</td>
+<td>101 Nye St.</td>
+<td></td>
+<td>New Bedford</td>
+<td>MA</td>
+<td class='excelText'>02746</td>
+<td>508-991-4105</td>
+<td>508-991-4110</td>
+<td>05,06,07,08,09,10,11,12</td>
+    </tr>
+<tr>
+<td>Hampden Charter School of Science East (District): Hampden Charter School of Science East</td>
+<td class='excelText'>04990305</td>
+<td>Charter School</td>
+<td>Principal</td>
+<td>Robyn Sklar</td>
+<td>20 Johnson Rd</td>
+<td></td>
+<td>Chicopee</td>
+<td>MA</td>
+<td class='excelText'>01022</td>
+<td>413-593-9090</td>
+<td>413-294-2648</td>
+<td>06,07,08,09,10,11,12</td>
+    </tr>
+<tr>
+<td>Hampden Charter School of Science West (District): Hampden Charter School of Science West</td>
+<td class='excelText'>35160305</td>
+<td>Charter School</td>
+<td>Principal</td>
+<td>Lucia Trudeau</td>
+<td>511 Main St.</td>
+<td></td>
+<td>West Springfield</td>
+<td>MA</td>
+<td class='excelText'>01089</td>
+<td>413-278-5450</td>
+<td>413-278-5387</td>
+<td>06,07,08,09,10,11,12</td>
+    </tr>
+<tr>
+<td>Helen Y. Davis Leadership Academy Charter Public (District): Helen Y. Davis Leadership Academy Charter Public School</td>
+<td class='excelText'>04190305</td>
+<td>Charter School</td>
+<td>Principal</td>
+<td>Arturo Forrest</td>
+<td>23 Leonard Street</td>
+<td></td>
+<td>Boston</td>
+<td>MA</td>
+<td class='excelText'>02122</td>
+<td>617-474-7950</td>
+<td>617-474-7957</td>
+<td>06,07,08</td>
+    </tr>
+<tr>
+<td>Hill View Montessori Charter Public (District): Hill View Montessori Charter Public School</td>
+<td class='excelText'>04550050</td>
+<td>Charter School</td>
+<td>Principal</td>
+<td>Phil Arnold</td>
+<td>75 Foundation Avenue</td>
+<td></td>
+<td>Haverhill</td>
+<td>MA</td>
+<td class='excelText'>01835</td>
+<td>978-521-2616</td>
+<td>978-521-2656</td>
+<td>K,01,02,03,04,05,06,07,08</td>
+    </tr>
+<tr>
+<td>Hilltown Cooperative Charter Public (District): Hilltown Cooperative Charter Public School</td>
+<td class='excelText'>04500105</td>
+<td>Charter School</td>
+<td>Principal</td>
+<td>Lara Ramsey</td>
+<td>1 Industrial Parkway</td>
+<td></td>
+<td>Easthampton</td>
+<td>MA</td>
+<td class='excelText'>01027</td>
+<td>413-529-7178</td>
+<td>413-527-1530</td>
+<td>K,01,02,03,04,05,06,07,08</td>
+    </tr>
+<tr>
+<td>Holyoke Community Charter (District): Holyoke Community Charter School</td>
+<td class='excelText'>04530005</td>
+<td>Charter School</td>
+<td>Principal</td>
+<td>Sonia Pope</td>
+<td>2200 Northampton St</td>
+<td></td>
+<td>Holyoke</td>
+<td>MA</td>
+<td class='excelText'>01040</td>
+<td>413-533-0111</td>
+<td>413-536-5444</td>
+<td>K,01,02,03,04,05,06,07,08</td>
+    </tr>
+<tr>
+<td>Innovation Academy Charter (District): Innovation Academy Charter School</td>
+<td class='excelText'>04350305</td>
+<td>Charter School</td>
+<td>Principal</td>
+<td>Federico Pereyra</td>
+<td>72 Tyng Road</td>
+<td></td>
+<td>Tyngsboro</td>
+<td>MA</td>
+<td class='excelText'>01879</td>
+<td>978-649-0432</td>
+<td>978-649-6337</td>
+<td>05,06,07,08,09,10,11,12</td>
+    </tr>
+<tr>
+<td>KIPP Academy Boston Charter School (District): KIPP Academy Boston Charter School</td>
+<td class='excelText'>04630205</td>
+<td>Charter School</td>
+<td>Principal</td>
+<td>Rhonda Barnes</td>
+<td>37 Babson Street</td>
+<td>KIPP Academy Boston</td>
+<td>Mattapan</td>
+<td>MA</td>
+<td class='excelText'>02126</td>
+<td>617-393-5682</td>
+<td>617-652-7461</td>
+<td>K,01,02,03,04,05,06,07,08</td>
+    </tr>
+<tr>
+<td>KIPP Academy Lynn Charter (District): KIPP Academy Lynn Charter School</td>
+<td class='excelText'>04290010</td>
+<td>Charter School</td>
+<td>Principal</td>
+<td>Rhonda Barnes</td>
+<td>90 High Rock Street</td>
+<td></td>
+<td>Lynn</td>
+<td>MA</td>
+<td class='excelText'>01902</td>
+<td>781-598-1609</td>
+<td>781-598-1639</td>
+<td>K,01,02,03,04,05,06,07,08,09,10,11,12</td>
+    </tr>
+<tr>
+<td>Lawrence Family Development Charter (District): Lawrence Family Development Charter School</td>
+<td class='excelText'>04540205</td>
+<td>Charter School</td>
+<td>Principal</td>
+<td>Hali Castleman</td>
+<td>34 West Street</td>
+<td></td>
+<td>Lawrence</td>
+<td>MA</td>
+<td class='excelText'>01841</td>
+<td>978-689-9863</td>
+<td>978-689-8133</td>
+<td>PK,K,01,02,03,04,05,06,07,08</td>
+    </tr>
+<tr>
+<td>Learning First Charter Public School (District): Learning First Charter Public School</td>
+<td class='excelText'>04860105</td>
+<td>Charter School</td>
+<td>Principal</td>
+<td>Leo Flanagan</td>
+<td>50 Richland St</td>
+<td></td>
+<td>Worcester</td>
+<td>MA</td>
+<td class='excelText'>01610</td>
+<td>774-420-7650</td>
+<td>774-420-7295</td>
+<td>K,01,02,03,04,05,06,07,08</td>
+    </tr>
+<tr>
+<td>Libertas Academy Charter School (District): Libertas Academy Charter School</td>
+<td class='excelText'>35140305</td>
+<td>Charter School</td>
+<td>Principal</td>
+<td>Modesto Montero</td>
+<td>146 Chestnut Street</td>
+<td></td>
+<td>Springfield</td>
+<td>MA</td>
+<td class='excelText'>01103</td>
+<td>413-342-5510</td>
+<td>--</td>
+<td>06,07,08,09,10</td>
+    </tr>
+<tr>
+<td>Lowell Community Charter Public (District): Lowell Community Charter Public School</td>
+<td class='excelText'>04560050</td>
+<td>Charter School</td>
+<td>Principal</td>
+<td>Nicholas Leonardos</td>
+<td>206 Jackson Street</td>
+<td></td>
+<td>Lowell</td>
+<td>MA</td>
+<td class='excelText'>01852</td>
+<td>978-323-0800</td>
+<td>978-323-4600</td>
+<td>PK,K,01,02,03,04,05,06,07,08</td>
+    </tr>
+<tr>
+<td>Lowell Middlesex Academy Charter (District): Lowell Middlesex Academy Charter School</td>
+<td class='excelText'>04580505</td>
+<td>Charter School</td>
+<td>Principal</td>
+<td>Sean McCarthy</td>
+<td>67 Middle Street</td>
+<td></td>
+<td>Lowell</td>
+<td>MA</td>
+<td class='excelText'>01852</td>
+<td>978-656-3165</td>
+<td>978-459-0456</td>
+<td>09,10,11,12</td>
+    </tr>
+<tr>
+<td>Map Academy Charter School (District): Map Academy Charter School</td>
+<td class='excelText'>35170505</td>
+<td>Charter School</td>
+<td>Principal</td>
+<td>Rachel Babcock</td>
+<td>11 Resnik Road</td>
+<td></td>
+<td>Plymouth</td>
+<td>MA</td>
+<td class='excelText'>02360</td>
+<td>508-830-9500</td>
+<td>508-425-2441</td>
+<td>09,10,11,12</td>
+    </tr>
+<tr>
+<td>Marblehead Community Charter Public (District): Marblehead Community Charter Public School</td>
+<td class='excelText'>04640305</td>
+<td>Charter School</td>
+<td>Principal</td>
+<td>Stephanie Brant</td>
+<td>17 Lime Street</td>
+<td></td>
+<td>Marblehead</td>
+<td>MA</td>
+<td class='excelText'>01945</td>
+<td>781-631-0777</td>
+<td>781-631-0500</td>
+<td>04,05,06,07,08</td>
+    </tr>
+<tr>
+<td>Martha's Vineyard Charter Public School (District): Martha's Vineyard Charter Public School</td>
+<td class='excelText'>04660550</td>
+<td>Charter School</td>
+<td>Principal</td>
+<td>Peter Steedman</td>
+<td>PO Box 1150</td>
+<td></td>
+<td>West Tisbury</td>
+<td>MA</td>
+<td class='excelText'>02575</td>
+<td>508-693-9900</td>
+<td>508-696-9008</td>
+<td>K,01,02,03,04,05,06,07,08,09,10,11,12</td>
+    </tr>
+<tr>
+<td>Martin Luther King, Jr. Charter School of Excellence (District): Martin Luther King, Jr. Charter School of Excellence</td>
+<td class='excelText'>04920005</td>
+<td>Charter School</td>
+<td>Principal</td>
+<td>Kendra Salvador</td>
+<td>285 Dorset Street</td>
+<td></td>
+<td>Springfield</td>
+<td>MA</td>
+<td class='excelText'>01108</td>
+<td>413-214-7806</td>
+<td>413-214-7838</td>
+<td>K,01,02,03,04,05</td>
+    </tr>
+<tr>
+<td>Match Charter Public School (District): Match Charter Public School</td>
+<td class='excelText'>04690505</td>
+<td>Charter School</td>
+<td>Principal</td>
+<td>Joseph Gallagher</td>
+<td>1001 Commonwealth Avenue</td>
+<td></td>
+<td>Boston</td>
+<td>MA</td>
+<td class='excelText'>02215</td>
+<td>617-232-0300</td>
+<td>617-232-2838</td>
+<td>PK,K,01,02,03,04,05,06,07,08,09,10,11,12</td>
+    </tr>
+<tr>
+<td>Mystic Valley Regional Charter (District): Mystic Valley Regional Charter School</td>
+<td class='excelText'>04700105</td>
+<td>Charter School</td>
+<td>Principal</td>
+<td>Alex Dan</td>
+<td>770 Salem Street</td>
+<td></td>
+<td>Malden</td>
+<td>MA</td>
+<td class='excelText'>02148</td>
+<td>781-388-0222</td>
+<td>781-321-5688</td>
+<td>K,01,02,03,04,05,06,07,08,09,10,11,12</td>
+    </tr>
+<tr>
+<td>Neighborhood House Charter (District): Neighborhood House Charter School</td>
+<td class='excelText'>04440205</td>
+<td>Charter School</td>
+<td>Principal</td>
+<td>Kate Scott</td>
+<td>21 Queen Street</td>
+<td></td>
+<td>Dorchester</td>
+<td>MA</td>
+<td class='excelText'>02122</td>
+<td>617-825-0703</td>
+<td>617-825-1829</td>
+<td>PK,K,01,02,03,04,05,06,07,08,09,10,11,12</td>
+    </tr>
+<tr>
+<td>New Heights Charter School of Brockton (District): New Heights Charter School of Brockton</td>
+<td class='excelText'>35130305</td>
+<td>Charter School</td>
+<td>Principal</td>
+<td>Omari Walker</td>
+<td>1690 Main Street</td>
+<td></td>
+<td>Brockton</td>
+<td>MA</td>
+<td class='excelText'>02301</td>
+<td>508-857-4633</td>
+<td>508-857-5721</td>
+<td>06,07,08,09,10,11,12</td>
+    </tr>
+<tr>
+<td>Old Sturbridge Academy Charter Public School (District): Old Sturbridge Academy Charter Public School</td>
+<td class='excelText'>35150205</td>
+<td>Charter School</td>
+<td>Principal</td>
+<td>Lisa DeTora</td>
+<td>1 Old Sturbridge Village Road</td>
+<td></td>
+<td>Sturbridge</td>
+<td>MA</td>
+<td class='excelText'>01566</td>
+<td>508-347-0283</td>
+<td>--</td>
+<td>K,01,02,03,04,05,06,07,08</td>
+    </tr>
+<tr>
+<td>Paulo Freire Social Justice Charter School (District): Paulo Freire Social Justice Charter School</td>
+<td class='excelText'>35010505</td>
+<td>Charter School</td>
+<td>Principal</td>
+<td>Gilbert Traverso</td>
+<td>134 Springfield St</td>
+<td></td>
+<td>Chicopee </td>
+<td>MA</td>
+<td class='excelText'>01013</td>
+<td>413-536-3201</td>
+<td>413-536-3206</td>
+<td>09,10,11,12</td>
+    </tr>
+<tr>
+<td>Phoenix Academy Charter Public High School, Chelsea (District): Phoenix Academy Charter Public High School, Chelsea</td>
+<td class='excelText'>04930505</td>
+<td>Charter School</td>
+<td>Principal</td>
+<td>Stella Dubish</td>
+<td>175 Hawthorne Street</td>
+<td></td>
+<td>Chelsea</td>
+<td>MA</td>
+<td class='excelText'>02150</td>
+<td>617-889-3100</td>
+<td>617-889-3144</td>
+<td>09,10,11,12</td>
+    </tr>
+<tr>
+<td>Phoenix Academy Public Charter High School, Lawrence (District): Phoenix Academy Public Charter High School, Lawrence</td>
+<td class='excelText'>35180505</td>
+<td>Charter School</td>
+<td>Principal</td>
+<td>Nachelle Gordon</td>
+<td>15 Union Street</td>
+<td></td>
+<td>Lawrence</td>
+<td>MA</td>
+<td class='excelText'>01840</td>
+<td>978-722-8410</td>
+<td>--</td>
+<td>09,10,11,12</td>
+    </tr>
+<tr>
+<td>Phoenix Academy Public Charter High School, Springfield (District): Phoenix Academy Public Charter High School, Springfield</td>
+<td class='excelText'>35080505</td>
+<td>Charter School</td>
+<td>Principal</td>
+<td>Calvin Johnson</td>
+<td>65 Lincoln Street</td>
+<td></td>
+<td>Springfield</td>
+<td>MA</td>
+<td class='excelText'>01105</td>
+<td>413-273-1236</td>
+<td>423-294-2500</td>
+<td>09,10,11,12</td>
+    </tr>
+<tr>
+<td>Pioneer Charter School of Science (District): Pioneer Charter School of Science</td>
+<td class='excelText'>04940205</td>
+<td>Charter School</td>
+<td>Principal</td>
+<td>Sanela Jonuz</td>
+<td>51-59 Summer Street</td>
+<td></td>
+<td>Everett</td>
+<td>MA</td>
+<td class='excelText'>01249</td>
+<td>617-389-7277</td>
+<td>617-389-7278</td>
+<td>K,01,02,03,04,05,06,07,08,09,10,11,12</td>
+    </tr>
+<tr>
+<td>Pioneer Charter School of Science II (District): Pioneer Charter School of Science II</td>
+<td class='excelText'>35060505</td>
+<td>Charter School</td>
+<td>Principal</td>
+<td>Vahit Sevinc</td>
+<td>97 Main Street</td>
+<td></td>
+<td>Saugus</td>
+<td>MA</td>
+<td class='excelText'>01906</td>
+<td>781-666-3945</td>
+<td>781-666-3910</td>
+<td>K,01,02,07,08,09,10,11,12</td>
+    </tr>
+<tr>
+<td>Pioneer Valley Chinese Immersion Charter (District): Pioneer Valley Chinese Immersion Charter School</td>
+<td class='excelText'>04970205</td>
+<td>Charter School</td>
+<td>Principal</td>
+<td>Kathleen Wang</td>
+<td>317 Russell Street</td>
+<td></td>
+<td>Hadley</td>
+<td>MA</td>
+<td class='excelText'>01035</td>
+<td>413-582-7040</td>
+<td>413-582-7068</td>
+<td>K,01,02,03,04,05,06,07,08,09,10,11,12</td>
+    </tr>
+<tr>
+<td>Pioneer Valley Performing Arts Charter Public (District): Pioneer Valley Performing Arts Charter Public School</td>
+<td class='excelText'>04790505</td>
+<td>Charter School</td>
+<td>Principal</td>
+<td>Brent Nielsen</td>
+<td>15 Mulligan Drive</td>
+<td></td>
+<td>South Hadley</td>
+<td>MA</td>
+<td class='excelText'>01075</td>
+<td>413-552-1580</td>
+<td>413-552-1594</td>
+<td>07,08,09,10,11,12</td>
+    </tr>
+<tr>
+<td>Prospect Hill Academy Charter (District): Prospect Hill Academy Charter School</td>
+<td class='excelText'>04870550</td>
+<td>Charter School</td>
+<td>Principal</td>
+<td>Angela Allen</td>
+<td>50 Essex Street</td>
+<td></td>
+<td>Cambridge</td>
+<td>MA</td>
+<td class='excelText'>02139</td>
+<td>617-284-7800</td>
+<td>617-284-7980</td>
+<td>PK,K,01,02,03,04,05,06,07,08,09,10,11,12</td>
+    </tr>
+<tr>
+<td>Rising Tide Charter Public (District): Rising Tide Charter Public School</td>
+<td class='excelText'>04830305</td>
+<td>Charter School</td>
+<td>Principal</td>
+<td>Beth Choiniere</td>
+<td>59 Armstrong Road</td>
+<td></td>
+<td>Plymouth</td>
+<td>MA</td>
+<td class='excelText'>02360</td>
+<td>508-747-2620</td>
+<td>508-747-1826</td>
+<td>05,06,07,08,09,10,11,12</td>
+    </tr>
+<tr>
+<td>River Valley Charter (District): River Valley Charter School</td>
+<td class='excelText'>04820050</td>
+<td>Charter School</td>
+<td>Principal</td>
+<td>Jonnie Lyn Evans</td>
+<td>2 Perry Way</td>
+<td></td>
+<td>Newburyport</td>
+<td>MA</td>
+<td class='excelText'>01950</td>
+<td>978-465-0065</td>
+<td>978-465-0119</td>
+<td>K,01,02,03,04,05,06,07,08</td>
+    </tr>
+<tr>
+<td>Roxbury Preparatory Charter (District): Roxbury Preparatory Charter School</td>
+<td class='excelText'>04840505</td>
+<td>Charter School</td>
+<td>Principal</td>
+<td>Tera Carr</td>
+<td>120 Fisher Avenue</td>
+<td></td>
+<td>Roxbury</td>
+<td>MA</td>
+<td class='excelText'>02120</td>
+<td>617-566-2361</td>
+<td>617-566-2373</td>
+<td>05,06,07,08,09,10,11,12</td>
+    </tr>
+<tr>
+<td>Salem Academy Charter (District): Salem Academy Charter School</td>
+<td class='excelText'>04850485</td>
+<td>Charter School</td>
+<td>Principal</td>
+<td>Stephanie Callahan</td>
+<td>45 Congress St.</td>
+<td>Shetland Park</td>
+<td>Salem</td>
+<td>MA</td>
+<td class='excelText'>01970</td>
+<td>978-744-2105</td>
+<td>978-744-7246</td>
+<td>06,07,08,09,10,11,12</td>
+    </tr>
+<tr>
+<td>Sizer School: A North Central Charter Essential (District): Sizer School: A North Central Charter Essential School</td>
+<td class='excelText'>04740505</td>
+<td>Charter School</td>
+<td>Principal</td>
+<td>Andrew Lay</td>
+<td>500 Rindge Road</td>
+<td></td>
+<td>Fitchburg</td>
+<td>MA</td>
+<td class='excelText'>01420</td>
+<td>978-345-2701</td>
+<td>978-345-9127</td>
+<td>07,08,09,10,11,12</td>
+    </tr>
+<tr>
+<td>South Shore Charter Public (District): South Shore Charter Public School</td>
+<td class='excelText'>04880550</td>
+<td>Charter School</td>
+<td>Principal</td>
+<td>Angie Pepin</td>
+<td>100 Longwater Circle</td>
+<td></td>
+<td>Norwell</td>
+<td>MA</td>
+<td class='excelText'>02061</td>
+<td>781-982-4202</td>
+<td>781-982-4201</td>
+<td>K,01,02,03,04,05,06,07,08,09,10,11,12</td>
+    </tr>
+<tr>
+<td>Springfield International Charter (District): Springfield International Charter School</td>
+<td class='excelText'>04410505</td>
+<td>Charter School</td>
+<td>Principal</td>
+<td>Justin Baker</td>
+<td>160 Joan Street</td>
+<td></td>
+<td>Springfield</td>
+<td>MA</td>
+<td class='excelText'>01129</td>
+<td>413-783-2600</td>
+<td>413-783-2555</td>
+<td>K,01,02,03,04,05,06,07,08,09,10,11,12</td>
+    </tr>
+<tr>
+<td>Springfield Preparatory Charter School (District): Springfield Preparatory Charter School</td>
+<td class='excelText'>35100205</td>
+<td>Charter School</td>
+<td>Principal</td>
+<td>Jessica Yiannos</td>
+<td>2071 Roosevelt Ave.</td>
+<td></td>
+<td>Springfield</td>
+<td>MA</td>
+<td class='excelText'>01104</td>
+<td>413-231-2722</td>
+<td>--</td>
+<td>K,01,02,03,04,05,06,07,08</td>
+    </tr>
+<tr>
+<td>Sturgis Charter Public (District): Sturgis Charter Public School</td>
+<td class='excelText'>04890505</td>
+<td>Charter School</td>
+<td>Principal</td>
+<td>Paul Marble</td>
+<td>427 Main Street</td>
+<td></td>
+<td>Hyannis</td>
+<td>MA</td>
+<td class='excelText'>02601</td>
+<td>508-778-1782</td>
+<td>508-771-6785</td>
+<td>09,10,11,12</td>
+    </tr>
+<tr>
+<td>UP Academy Charter School of Boston (District): UP Academy Charter School of Boston</td>
+<td class='excelText'>04800405</td>
+<td>Charter School</td>
+<td>Principal</td>
+<td>James Frier</td>
+<td>215 Dorchester Street</td>
+<td></td>
+<td>South Boston</td>
+<td>MA</td>
+<td class='excelText'>02127</td>
+<td>617-635-8819</td>
+<td>617-635-8820</td>
+<td>06,07,08</td>
+    </tr>
+<tr>
+<td>UP Academy Charter School of Dorchester (District): UP Academy Charter School of Dorchester</td>
+<td class='excelText'>35050405</td>
+<td>Charter School</td>
+<td>Principal</td>
+<td>Ariella Silverstein-Tapp</td>
+<td>35 Westville Street</td>
+<td></td>
+<td>Boston</td>
+<td>MA</td>
+<td class='excelText'>02124</td>
+<td>617-635-8810</td>
+<td>--</td>
+<td>PK,K,01,02,03,04,05,06,07,08</td>
+    </tr>
+<tr>
+<td>Veritas Preparatory Charter School (District): Veritas Preparatory Charter School</td>
+<td class='excelText'>04980405</td>
+<td>Charter School</td>
+<td>Principal</td>
+<td>Amy Clark</td>
+<td>370 Pine Street</td>
+<td></td>
+<td>Springfield</td>
+<td>MA</td>
+<td class='excelText'>01105</td>
+<td>413-539-0055</td>
+<td>413-306-5076</td>
+<td>05,06,07,08,09</td>
+    </tr>
+</table>
+
+
+</span> 
+            <span id="lblDebugText"></span>
+    </body>
+</html>
