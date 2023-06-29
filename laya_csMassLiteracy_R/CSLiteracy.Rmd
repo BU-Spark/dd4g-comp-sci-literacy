@@ -1,0 +1,305 @@
+---
+title: "DDfg_csLiteracy"
+output: html_document
+date: "2023-06-26"
+---
+Configuring Markdown file:
+```{r setup}
+knitr::opts_chunk$set(echo = FALSE, message = FALSE)
+```
+
+First, start by importing the necessary libraries:
+```{r}
+library(tidyverse)
+library(ggplot2)
+library(sf)
+library(tmap)
+library(readxl)
+
+```
+
+Importing data:
+```{r}
+# reading data on school info from https://profiles.doe.mass.edu/search/search.aspx?leftNavId=11238
+# info gives us school address (town and zipcode)
+schoolinfo <- read_excel("data/school_info.xlsx") %>% 
+  select(`Org Name`, `Org Code`, `Org Type`, `Address 1`, Town, Zip) %>% 
+  mutate(full_address = paste(`Address 1`, ", ", Town))
+
+# trying two different sources (both too outdated so not used)
+district_sf <- st_read("data/Massachusetts_Public_School_Districts")
+district_sf <- st_read("data/schooldistricts")
+
+# other shapefiles:
+counties_sf <- st_read("data/counties") # shapefile by counties
+
+zipcode_sf <- st_read("data/zipcodes_nt") # shapefile by zipcode
+# from https://www.mass.gov/info-details/massgis-data-zip-codes-5-digit-from-here-navteq
+
+town_sf <- st_read("data/kx-massachusetts-municipalities-SHP") %>% select(TOWN, geometry) # shapefile by boston towns
+
+# reading data from https://profiles.doe.mass.edu/statereport/computersciencecourse.aspx
+lowincome <- read_excel("data/lowincome.xlsx", skip = 1, col_names = TRUE)
+totalstudents <- read_excel("data/totalstudentcount.xlsx", skip = 1, col_names = TRUE) %>% 
+  filter(`District Name` != "State Totals") %>% 
+  mutate(total_cs = as.numeric(gsub(",","",`All Grades`)),
+         total = as.numeric(gsub(",","",`Total Students`))
+         ) 
+
+# data on school and its county
+school_counties <- read_excel("data/counties_school.xlsx")
+
+```
+```{r}
+# testing out shapefile
+tm_shape(town_sf) + tm_polygons()
+```
+
+```{r}
+lowincome <- read_excel("data/lowincome.xlsx", skip = 1, col_names = TRUE) # reset file
+
+# clean data to fix data type errors and calculate ratio:
+lowincome <- lowincome %>% mutate(low_income_cs = as.numeric(gsub(",","",`All Grades`)),
+                                   low_income_total = as.numeric(gsub(",","",`Total Students`)),
+                                   ratio_low_income = low_income_total / low_income_total) %>% 
+  filter(`District Name` != "State Totals") %>% 
+  select(-`All Grades`, -`Total Students`)
+
+# join low income data with data on zipcode
+lowincome_sf <- left_join(lowincome, schoolinfo, by=c("District Name" = "Org Name"))
+
+# to match the other dataset
+lowincome_sf$Town <- toupper(lowincome_sf$Town)
+
+# case where zipcode does not have a school:
+none_zipcode_sf <- anti_join(zipcode_sf, lowincome_sf, by=c("POSTCODE" = "Zip")) %>%
+  st_as_sf()
+
+# join zipcode with shapefile data
+lowincome_sf <- full_join(lowincome_sf, town_sf, by=c("Town" = "TOWN")) %>% st_as_sf()
+
+```
+low_income_cs: students who are low income and is taking >=1 CS class
+low_income_total: total number of low income students
+total_cs: total number of students taking >=1 CS class
+total: all students
+
+ratio_low_income: low_income_cs / low_income_total
+  This tells us how many low income students out of all low income students are taking CS classes.
+
+ratio_low_total_cs: low_income_cs / total_cs
+  This tells us how many of the students taking CS classes are from low income families.
+  
+ratio_cs_total: total_cs / total
+  This tells us how many students are taking CS calsses
+  
+```{r}
+# join low income data with cs literacy data:
+low_total <- full_join(lowincome, totalstudents, by = 'District Code') %>% 
+  select(`District Name.x`, `District Code`, low_income_cs, low_income_total, total_cs, total, ratio_low_income)
+
+# calculate ratio:
+low_total <- low_total %>%  mutate(ratio_low_total_cs = low_income_cs / total_cs)
+
+# join school name and school zipcode
+low_total_sf <- left_join(low_total, schoolinfo, by = c("District Name.x" = "Org Name"))
+# join school zipcode and then school sf
+low_total_sf <- inner_join(low_total_sf, zipcode_sf, by=c("Zip" = "POSTCODE")) %>% st_as_sf()
+
+# test map visual
+tm_shape(low_total_sf) +
+  tm_polygons(col="ratio_low_total_cs", alpha=0.75)
+
+```
+```{r}
+# manipulate data on total cs literacy
+total_cs <- totalstudents %>% mutate(ratio_cs_total = total_cs / total)
+
+# join data with address data:
+total_cs_sf <- left_join(total_cs, schoolinfo, by = c("District Name" = "Org Name"))
+total_cs_sf <- inner_join(total_cs_sf, zipcode_sf, by = c("Zip" = "POSTCODE")) %>% st_as_sf()
+
+# test mapping out particpation across state:
+tm_shape(none_zipcode_sf) +
+  tm_polygons() +
+tm_shape(total_cs_sf) + 
+  tm_polygons(col="ratio_cs_total", 
+              title="Ratio of students taking CS classes",
+              palette="Blues") +
+  tm_layout(main.title = "CS Literacy in Massachusetts by Zipcode")  
+
+```
+
+```{r}
+# changing tmap settings:
+# tmap_mode("view")
+# tmap_mode("plot")
+
+# ggplot(lowincome_sf) + geom_sf(aes(fill=ratio_low_income))
+# 
+# tm_shape(none_zipcode_sf) + 
+#   tm_polygons() + 
+# tm_shape(lowincome_sf) + 
+#   tm_polygons(col="ratio_low_income")
+
+
+```
+
+
+```{r}
+# crunching data to get all columns in one df:
+everything <- low_total %>% mutate(ratio_cs_total = total_cs / total,
+                                   ratio_low_total = low_income_total / total) %>% 
+  mutate(charter = ifelse(grepl("Charter", `District Name.x`), 1, 0))
+
+# join school name with its town
+everything_sf <- left_join(everything, schoolinfo, by = c("District Name.x" = "Org Name"))
+everything_sf$Town <- toupper(everything_sf$Town)
+everything_sf <- full_join(everything_sf, town_sf, by = c("Town" = "TOWN"))
+
+everything_sf2 <- everything_sf %>% group_by(Town) %>% summarize(count=n(), mean(ratio_cs_total))
+everything_sf2 <- right_join(everything_sf2, town_sf, by = c("Town" = "TOWN")) %>% st_as_sf()
+
+# everything_sf2$`mean(ratio_cs_total)` <- everything_sf2$`mean(ratio_cs_total)` %>%  replace_na(-1)
+
+# scatterplot on ratio -- each point is a district
+ggplot(everything, aes(x=ratio_low_total, y= ratio_cs_total)) +
+  geom_point(aes(color=factor(charter)), alpha=0.75) +
+  labs(x="Low Income Proportion \n(total low income students / total students)", 
+       y="CS Literacy Proportion \n(total students taking CS courses / total students)",
+       title="Relationship between Low Income and CS Course Participation",
+       color = "") +
+  scale_x_continuous(limits = c(0, 1), breaks = seq(0, 1, 0.1)) +
+  scale_y_continuous(limits = c(0, 1), breaks = seq(0, 1, 0.1)) +
+  scale_color_manual(labels = c("Not Chartered", "Chartered"), values = c("mediumpurple1", "limegreen"))
+
+# plot just chartered 
+ggplot(everything %>% filter(charter == 1), 
+       aes(x=ratio_low_total, y= ratio_cs_total)) +
+  geom_point()
+
+# zoom in
+ggplot(everything %>% filter(total < 15000)) + 
+  geom_point(aes(x=total, y=low_income_cs))
+
+```
+
+```{r}
+# test mapping mean ratios:
+tm_shape(everything_sf2) + 
+  tm_polygons(col="mean(ratio_cs_total)",
+              title="Ratio of students taking CS classes",
+              palette="Blues") +
+  tm_layout(main.title = "Average CS Literacy in Massachusetts by Town")  
+
+```
+
+```{r}
+# test plotting no data areas:
+ggplot(none_zipcode_sf) + geom_sf()
+
+tm_shape(none_zipcode_sf) + tm_polygons()
+
+```
+
+```{r}
+# trying to join data with counties
+everything_counties <- everything %>% mutate(first_name = word(`District Name.x`, 1))
+
+school_counties <- school_counties %>% mutate(first_name = word(SchoolName, 1))
+
+everything_counties <- left_join(everything_counties, school_counties, by = "first_name")
+
+duplicated <- duplicated(everything_counties$`District Name.x`)
+
+everything_counties <- everything_counties[!duplicated, ]
+
+everything_counties <- everything_counties %>% drop_na()
+
+everything_counties_sum <- everything_counties %>% 
+  group_by(County) %>% 
+  summarize(mean_li_ratio = mean(ratio_low_total),
+            mean_cs_ratio = mean(ratio_cs_total))
+
+```
+
+```{r}
+
+# sort the County column by mean_li_ratio in descending order
+sorted_counties <- everything_counties_sum %>%
+  filter(variable == "mean_li_ratio") %>%
+  arrange(desc(ratio_val)) %>%
+  pull(County)
+
+# create a new factor variable with sorted counti
+everything_counties_sum_pivoted <- everything_counties_sum %>% 
+         pivot_longer(!County, names_to = "variable", values_to = "ratio_val")
+
+everything_counties_sum_pivoted$County <- factor(
+  everything_counties_sum_pivoted$County,
+  levels = sorted_counties
+)
+
+
+# plot the bar chart with sorted counties
+ggplot(everything_counties_sum_pivoted) +
+  geom_bar(aes(x = County, y = ratio_val, fill = variable),
+           stat = 'identity',
+           position = 'dodge',
+           width=0.8) +
+  geom_hline(aes(yintercept = 0.4), stat = "hline", linetype=2) +
+  theme(axis.text.x = element_text(angle = 45, hjust = 1)) +
+  labs(x="County", 
+       y="Proportion",
+       title="Average CS Literacy and Low Income propotions by Massachusetts County",
+       fill = "Variable") +
+  scale_fill_manual(labels = c("\nAverage CS Literacy Rate \n(CS students / total students)\n",
+                               "\nAverage Low Income Proportion \n(low income students / total students)\n"), 
+                    values = c("mediumpurple1", "orange"))
+
+```
+
+```{r}
+# testing scatter on mean ratios (each point is a district)
+ggplot(everything_counties_sum) + 
+  geom_point(aes(x=mean_li_ratio, y=mean_cs_ratio)) 
+
+```
+```{r}
+passing <- read_excel("data/passing.xlsx")
+
+passing <- passing %>% mutate(low_income = ifelse(`Percentage of Low Income Student` >= 40,
+                                     1, 0))
+
+ggplot(passing %>% filter(`Number of NGO` < 200), aes(x=`Number of NGO`, y=`% Score 3-5`)) + 
+  geom_point() +
+  geom_text(data = passing %>% filter(`Number of NGO` < 200, 
+                                      Town %in% c("Worcester", "Waltham", "Brookline", "Lexington", "Somerville", "Springfield", "Framingham")), 
+            aes(label = Town),
+            nudge_y = 3, nudge_x = -1) +
+  labs(x="Number of NGOs", 
+       y="Percent receiving passing score (AP Scores 3-5)",
+       title="Number of NGOs and AP Test Performance by Towns in Massachusetts") 
+
+ggplot(passing) +
+  geom_point(aes(x=`Percentage of Low Income Student`, y=`% Score 3-5`))
+
+```
+
+Suggested stretch goal:
+
+```{r}
+ggplot(everything_counties %>% filter(County == "SUFFOLK"), aes(x=ratio_low_total, y= ratio_cs_total)) +
+  geom_point(aes(color=factor(charter)), alpha=0.75) +
+  labs(x="Low Income Proportion \n(total low income students / total students)", 
+       y="CS Literacy Proportion \n(total students taking CS courses / total students)",
+       title="Relationship between Low Income and CS Course Participation In Suffolk County",
+       color = "") +
+  scale_x_continuous(limits = c(0, 1), breaks = seq(0, 1, 0.1)) +
+  scale_y_continuous(limits = c(0, 1), breaks = seq(0, 1, 0.1)) +
+  scale_color_manual(labels = c("Not Chartered", "Chartered"), values = c("mediumpurple1", "limegreen"))
+
+
+```
+
+
