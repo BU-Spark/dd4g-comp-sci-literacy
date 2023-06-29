@@ -1,0 +1,41 @@
+========================================================================
+ Massachusetts Municipalities
+------------------------------------------------------------------------
+ https://koordinates.com/layer/97773-massachusetts-municipalities/
+========================================================================
+From: State of Massachusetts
+
+Description:
+  The political boundary datalayer is a polygon representation of town boundaries
+  created from arcs developed from survey coordinates extracted from the 68-volume
+  Harbor and Lands Commission Town Boundary Atlas for the 351 communities (cities
+  and towns) in Massachusetts. The Atlas was published in the early 1900's and is
+  maintained by the Survey Section of Massachusetts Highway Department. For
+  communities with a coastal boundary, MassGIS has collaborated with Massachusetts
+  Water Resources Authority and the Department of Environmental Protection to
+  complete a 1:12000 scale coastline. The boundary for the coastline was defined
+  as being the upland side of tidal flats and rocky inter-tidal zones. Note that
+  the 351 communities are the official municipal names, not including "villages"
+  or other sections of towns.
+  
+  © Massachusetts Highway Survey Section, MassGIS
+  This layer is sourced from
+  [gisprpxy.itd.state.ma.us](http://gisprpxy.itd.state.ma.us/arcgisserver/rest/services/AGOL/CommunityCompact/FeatureServer?f=json).
+
+CRS: NAD83 / Massachusetts Mainland
+
+------------------------------------------------------------------------
+ Processing steps applied by Koordinates
+------------------------------------------------------------------------
+
+- imported to Koordinates in Esri JSON format on 21 Sep 2018
+- 67 invalid geometries fixed at import time 
+    (see https://koordinates.com/layer/97773-massachusetts-municipalities/history/)
+- converted by Koordinates to Shapefile on 27 Jun 2023 (reference #3110919)
+
+====================
+No license specified
+====================
+
+No license was specified for this layer. This could mean default rights under copyright law for your legal jurisdiction may apply. Please check with Koordinates if you're unsure of your right to access and use this layer.
+
